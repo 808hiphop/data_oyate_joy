@@ -19,9 +19,10 @@
   <body>
     <h1 style="color: green; font-family: Helvetica">Hello, world! Welcome to the future!</h1>
     <br>
-    <button id="record" type="button" class="btn btn-success">Record</button>
+    <button id="record" type="button" class="btn btn-success" style="background-color:black">Record</button>
     <br>
-    <button id="submit" type="button" class="btn btn-primary" style="background-color:black">Insert recording</button>
+    <br>
+    <button id="submit" type="button" class="btn btn-primary" style="background-color:black" disabled="true">Insert recording</button>
     <br>
     <p style="color: green;">ʻO kēia ka māmalaʻōlelo Hawaiʻi ma kēia pūnaewele!</p>
 
@@ -44,8 +45,15 @@
         console.log("record" + counter);
         
         counter ++;
+        $("#submit").prop("disabled", false);
       });
+      var submit_counter
+      $("#submit").click(function(){
+        console.log("submit" + submit_counter)
+        submit_counter ++;
 
+        $("#submit").prop("disabled", true);
+      })
     </script>
   </body>
 </html>
