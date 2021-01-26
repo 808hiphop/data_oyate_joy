@@ -10,7 +10,7 @@
         {"phrase": "I like ice cream", "id": "I_like_ice_cream_phrase"},
         {"phrase": "I don't like ice cream", "id": "I_don't_like_ice_cream_phrase"},
         {"phrase": "I like cookies", "id": "I_like_cookies_phrase"},
-        {"phrase": "I don't like cookies", "id": "I_don't_like_cookies_phrase"},
+        {"phrase": "I don't like cookies", "id": "I_don't_like_cookies_phrase"}
 
     ]
 }
