@@ -23,11 +23,11 @@
     <form>
       <div class="mb-3">
         <label for="exampleInputName1" class="form-label">Name</label>
-        <input  type="name" class="form-control" id="exampleInputName1">
+        <input id="name" type="name" class="form-control" id="exampleInputName1">
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email Address</label>
-        <input type="email" value="some email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" value="some email" class="form-control" id="email" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We will never share your email with anyone else</div>
       </div>
       <div class="mb-3">
@@ -72,6 +72,10 @@
         
         console.log(emailInput.val());
         input.email = emailInput.val();
+        input.name = $("#name").val();
+
+        console.log(input);
+
         $("#submit").prop("disabled", true);
       });
     </script>
