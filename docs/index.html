@@ -66,10 +66,12 @@
       var emailInput = $("#email");
       // var nameInput = $("#name");
       $("#submit").click(function(){
+        var input = {};
         console.log("submit" + submitCounter)
         submitCounter ++;
         
         console.log(emailInput.val());
+        input.email = emailInput.val();
         $("#submit").prop("disabled", true);
       });
     </script>
