@@ -53,13 +53,7 @@
 
     <script>
       console.log("I am Joy-Joy");
-      
-      console.log($("#exampleInputEmail1").val());
-      $("#submit").click(function(){
-        var str = $("#exampleInputEmail1").val();
-        
-        $("#submit").prop("disabled", true);
-      });
+       
       var counter = 0;
       $("#record").click(function(){
         console.log("record" + counter);
@@ -67,11 +61,15 @@
         counter ++;
         $("#submit").prop("disabled", false);
       });
-      var submit_counter = 0;
+      var submitCounter = 0;
+      var submit_button = $("#submit");
+      var emailInput = $("#email");
+      // var nameInput = $("#name");
       $("#submit").click(function(){
-        console.log("submit" + submit_counter)
-        submit_counter ++;
-
+        console.log("submit" + submitCounter)
+        submitCounter ++;
+        
+        console.log(emailInput.value);
         $("#submit").prop("disabled", true);
       });
     </script>
