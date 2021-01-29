@@ -47,7 +47,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleInputTime1" class="form-label">Time Stamp</label>
-        <input id="time" type="time" class="form-control">
+        <input id="time stamp" type="time" class="form-control">
       </div>
       <div class="mb-3">
         <label for="exampleInputPhrase1" class="form-label">Phrase ID string</label>
@@ -62,9 +62,9 @@
       <section class="main-controls">
         <canvas class="visualizer" height="60px"></canvas>
         <div id="buttons" >
-          <button class="record">Record</button>
-          <button class="stop">Stop</button>
-          <button class="submit">Submit Recording</button>
+          <button id="record" class="record">Record</button>
+          <button id="stop" class="stop">Stop</button>
+          <button id="submit" class="submit">Submit Recording</button>
         </div>
       </section>
       <br>
@@ -94,20 +94,32 @@
         console.log("record" + counter);
         
         counter ++;
+        $("#submit").prop("disabled", true);
+      });
+      $("#stop").click(function(){
+
         $("#submit").prop("disabled", false);
       });
+
       var submitCounter = 0;
       var submit_button = $("#submit");
       var emailInput = $("#email");
-      // var nameInput = $("#name");
+      
       $("#submit").click(function(){
         var input = {};
+
+        var d = new Date()
+        
         console.log("submit" + submitCounter)
         submitCounter ++;
         
         console.log(emailInput.val());
         input.email = emailInput.val();
         input.name = $("#name").val();
+        input.years = $("#years").val();
+        input.age = $("#age").val();
+        input.gender = $("#gender").val();
+        input.timestamp = d.toUTCString();
 
         console.log(input);
 
