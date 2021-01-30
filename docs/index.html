@@ -43,12 +43,29 @@
       </div>
       <div class="mb-3">
         <label for="exampleInputGender1" class="form-label">Gender</label>
-        <input id="gender" type="gender" class="form-control">
-      </div>
+        <div class="form check for-check-inline">
+            <input class="form-check-input" type="radio" name="genders" id="radioFemale" value="Female">
+            <label class="form-check-label" for="radioFemale">Female</label>
+        </div>
+        <div class="form check for-check-inline">
+          <input class="form-check-input" type="radio" name="genders" id="radioMale" value="Male">
+          <label class="form-check-label" for="radioMale">Male</label>
+        </div>
+        <div class="form check for-check-inline">
+          <input class="form-check-input" type="radio" name="genders" id="radioNB" value="Non-Binary">
+          <label class="form-check-label" for="radioNB">Non-Binary</label>
+        </div>
+        <div class="form check for-check-inline">
+          <input class="form-check-input" type="radio" name="genders" id="radioNA" value="other">
+          <label class="form-check-label" for="radioNA">Prefer Not to Answer/Other</label>
+        </div>
+
       <div class="mb-3">
         <label for="exampleInputTime1" class="form-label">Time Stamp</label>
         <input id="time" type="time" class="form-control">
       </div>
+      <br>
+      <br>
       <div class="mb-3">
         <label for="exampleInputPhrase1" class="form-label">Phrase ID string</label>
       </div>
@@ -118,7 +135,10 @@
         input.name = $("#name").val();
         input.years = $("#years").val();
         input.age = $("#age").val();
-        input.gender = $("#gender").val();
+        input.radioFemale = $("#radioFemale").val();
+        input.radioMale = $("#radioMale").val();
+        input.radioNB = $("#radioNB").val();
+        input.radioNA = $("#radioNA").val();
         input.timestamp = d.toUTCString();
 
         console.log(input);
