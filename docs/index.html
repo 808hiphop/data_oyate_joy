@@ -14,12 +14,17 @@
   crossorigin="anonymous"></script>
   <style>
     .container {
-    max-width: 60%;   /* adjust to your preference; can also do px instead of percent */
-    margin: 0 auto;     /* centers the container */
-    text-align: center; /* keeps your text centered */
+    max-width: 600px;    /* limit width */
+    margin: 0 auto;      /* center it */
     }
+
     h1, h2, p {
-    text-align: center;
+    text-align: center;  /* optional */
+    }
+
+    input, textarea {
+    width: 100%;         /* fill container, but NOT full screen */
+    box-sizing: border-box;
     }
   </style>
     <title>Indigenous AI</title>
